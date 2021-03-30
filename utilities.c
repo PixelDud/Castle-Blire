@@ -49,3 +49,7 @@ void fadeI(UINT8 fadeSpeed){
         delayGame(fadeSpeed);
     }
 }
+
+
+void getInput(){
+}

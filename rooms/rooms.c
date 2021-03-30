@@ -89,3 +89,31 @@ void roomSeven(){
     set_bkg_data(0, 16, variation7_data);
     set_bkg_tiles(0, 0, 20, 18, variation7_map);
 }
+
+
+void displayRoom(int room){
+    if(room == 0){
+        roomZero();
+    }
+    else if(room == 1){
+        roomOne();
+    }
+    else if(room == 2){
+        roomTwo();
+    }
+    else if(room == 3){
+        roomThree();
+    }
+    else if(room == 4){
+        roomFour();
+    }
+    else if(room == 5){
+        roomFive();
+    }
+    else if(room == 6){
+        roomSix();
+    }
+    else if(room == 7){
+        roomSeven();
+    }
+}

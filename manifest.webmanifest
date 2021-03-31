@@ -5,7 +5,7 @@
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/PixelDud/Castle-Blire/emulator/images/dud.png",
-      "sizes": "192x192",
+      "sizes": "120x120",
       "type": "image/png"
     }
   ],

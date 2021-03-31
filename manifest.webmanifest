@@ -1,7 +1,7 @@
 {
   "background_color": "black",
   "description": "Dungeon crawler for the Game Boy.",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/PixelDud/Castle-Blire/emulator/images/EF80B98B-D9FE-4CF1-8055-1696F4D299E8.png",

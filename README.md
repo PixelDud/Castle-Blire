@@ -1,9 +1,15 @@
 # JavaScript GameBoy Color Emulator
 
-Fork of Grant Galitz's JavaScript GameBoy Color Emulator made for running a single ROM
+A fork of Chris Maltby's fork of Grant Galitz's JavaScript GameBoy Color Emulator made for running a single ROM
 when uploading homebrew games to services like Itch.io.
 
 This version makes the following changes.
+
+- Adds custom website title
+- Adds favicon
+- Plays *only* the **best** Game Boy game ever
+
+Maltby's version made the following changes.
 
 - Canvas fills browser window on desktop/tablet while keeping aspect ratio
 - Touch controls displayed on mobile/tablet 
@@ -13,24 +19,16 @@ This version makes the following changes.
 - Wait for keyboard or touch input before starting AudioContext to fix issues in Chrome and iOS not playing Audio
 - No ability to switch ROM, or save/load states, this version is intended for deploying a single game
 
-## Usage
-
-- Clone this repository
-- Add your ROM file as `rom/game.gb` (or edit romPath in js/other/mobile.js to point to your ROM file)
-- Upload to a webserver and visit index.html
-
 ## Keyboard Controls
 
-Up - Up Arrow / W  
-Down - Down Arrow / S  
-Left - Left Arrow / A  
-Right - Right Arrow / D  
-A - Alt / Z / J  
-B - Ctrl / K / X  
-Start - Enter  
-Select - Shift  
-
-Edit by changing `bindKeyboard` in `js/other/controls.js`.
+Up - Up Arrow / W
+Down - Down Arrow / S
+Left - Left Arrow / A
+Right - Right Arrow / D
+A - Alt / Z / J
+B - Ctrl / K / X
+Start - Enter
+Select - Shift
 
 ## License
 

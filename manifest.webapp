@@ -1,10 +1,11 @@
 {
-  "name": "GAMEBOY",
-  "description": "GameBoy Online GAMEBOY Emulator",
+  "name": "Castle Blire",
+  "description": "Dungeon Crawler for the Game Boy",
   "launch_path": "/index.html",
   "fullscreen": true,
   "icons": {
-    "128": "/images/128.png"
+    "128": "/images/dud.png"
+    "592": "/images/dud.png"
   },
   "orientation": ["portrait-primary"]
 }

@@ -4,7 +4,7 @@
   "display": "fullscreen",
   "icons": [
     {
-      "src": "images/dud.png",
+      "src": "https://raw.githubusercontent.com/PixelDud/Castle-Blire/emulator/images/dud.png",
       "sizes": "192x192",
       "type": "image/png"
     }

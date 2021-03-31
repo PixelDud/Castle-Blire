@@ -1,0 +1,19 @@
+{
+  "background_color": "#000000",
+  "description": "Dungeon crawler for the Game Boy.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/images/dud.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "PixelDud | Castle Blire",
+  "short_name": "Castle Blire",
+  "start_url": "/index.html",
+  "url": "https://pixeldud.github.io/Castle-Blire/",
+  "manifestUrl": "https://pixeldud.github.io/Castle-Blire/manifest.webmanifest",
+  "lang": "",
+  "screenshots": []
+}

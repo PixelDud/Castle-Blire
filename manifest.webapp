@@ -1,10 +1,13 @@
 {
-  "name": "GAMEBOY",
-  "description": "GameBoy Online GAMEBOY Emulator",
-  "launch_path": "/index.html",
-  "display": "standalone",
-  "start_url": "/?standalone=true"
-  "icons": {
-    "128": "/images/dud.png"
-  }
+    "name": "Castle Blire",
+    "description": "A Game Boy Game",
+    "launch_path": "/index.html",
+    "display": "standalone",
+    "start_url": "/?standalone=true"
+    "icons": [
+        {
+            "src": "images/dud.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
 }

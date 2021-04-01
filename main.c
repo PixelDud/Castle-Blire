@@ -8,14 +8,17 @@
 
 void main(){
     int hall[4] = {1,4,5,6};
-    int randomIndex = rand() % 4 + 1;
     
     bootSequence();
     
+    fadeO(2);
+    displayRoom(hall[0]);
+    fadeI(2);
+    
     while(1 == 1){
+        waitpad(J_UP);
         fadeO(2);
         displayRoom(hall[rand() % 4 + 1]);
         fadeI(2);
-        waitpad(J_UP);
     }
 }

@@ -2,9 +2,9 @@
   "name": "GAMEBOY",
   "description": "GameBoy Online GAMEBOY Emulator",
   "launch_path": "/index.html",
-  "fullscreen": true,
+  "display": "standalone",
+  "start_url": "/?standalone=true"
   "icons": {
-    "128": "/images/128.png"
-  },
-  "orientation": ["portrait-primary"]
+    "128": "/images/dud.png"
+  }
 }

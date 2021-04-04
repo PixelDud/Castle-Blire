@@ -2,8 +2,7 @@
 #include <rand.h>
 #include <gb/gb.h>
 #include "boot.c"
-#include "castle.c"
-#include "rooms/rooms.c"
+#include "navigation.c"
 
 
 void main(){
@@ -12,13 +11,13 @@ void main(){
     bootSequence();
     
     fadeO(2);
-    displayRoom(hall[0]);
+    printf("%d", &location());
     fadeI(2);
     
-    while(1 == 1){
-        waitpad(J_UP);
+    while(1){
+        navigation();
         fadeO(2);
-        displayRoom(hall[rand() % 4 + 1]);
+        printf("%d", &location());
         fadeI(2);
     }
 }

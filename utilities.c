@@ -51,5 +51,35 @@ void fadeI(UINT8 fadeSpeed){
 }
 
 
-void getInput(){
+int getInput(){
+	while(1){
+        switch(joypad()){
+            case J_RIGHT: // return 0 is RIGHT
+                return 0;
+                break;
+            case J_LEFT: // return 1 is LEFT
+                return 1;
+                break;
+            case J_UP: // return 2 is UP
+                return 2;
+                break;
+            case J_DOWN: // return 3 is DOWN
+                return 3;
+                break;
+            case J_START: // return 4 is START
+                return 4;
+                break;
+            case J_SELECT: // return 5 is SELECT
+                return 5;
+                break;
+            case J_A: // return 6 is A
+                return 6;
+                break;
+            case J_B: // return 7 is B
+                return 7;
+                break;
+            default:
+                break;
+		}
+	}
 }

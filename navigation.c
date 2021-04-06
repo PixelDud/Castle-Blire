@@ -15,6 +15,12 @@ int select = 5;
 int a = 6;
 int b = 7;
 
+// Define movements
+int moveUp = (player[0], player[1] + 1, 0);
+int moveDown = (player[0], player[1] - 1, 2);
+int moveLeft = (player[0] - 1, player[1], 1);
+int moveRight = (player[0] + 1, player[1], 3);
+
 // Define location variables
 int level = 8;
 int player[] = {6, 6, 1};
@@ -164,46 +170,48 @@ void validateMove(int room, int input, int direction){
     if(room == 1){
         if(direction == 0){
             if(input == 2){
-                player[] = {player[0], player[1] + 1, 0}
+                player[] = {player[0], player[1] + 1, 0};
             }
             if(input == 3){
-                player[] = {player[0], player[1] - 1, 2}
+                player[] = {player[0], player[1] - 1, 2};
             }
         }
         else if(direction == 2){
             if(input == 2){
-                player[] = {player[0], player[1] - 1, 2}
+                player[] = {player[0], player[1] - 1, 2};
             }
             if(input == 3){
-                player[] = {player[0], player[1] + 1, 0}
+                player[] = {player[0], player[1] + 1, 0};
             }
         }
     }
     else if(room == 2){
         if(direction == 1){
             if(input == 2){
-                player[] = {player[0] + 1, player[1], 2}
+                player[] = {player[0] + 1, player[1], 2};
             }
             else if(input == 3){
-                player[] = {player[0] - 1, player[1], 3}
+                player[] = {player[0] - 1, player[1], 3};
             }
         }
         else if(direction == 3){
             if(input == 2){
-                player[] = {player[0] - 1, player[1], 3}
+                player[] = {player[0] - 1, player[1], 3};
             }
             else if(input == 3){
-                player[] = {player[0] + 1, player[1], 2}
+                player[] = {player[0] + 1, player[1], 2};
             }
         }
     }
     else if(room == 3){
         if(direction == 3){
-            if(input == 1){
+            if(input == 0){
+                player[] = {player[0], player[1] + 1, 1};
             }
         }
         else if(direction == 4){
-            if(input == 0){
+            if(input == 1){
+                player[] = {player[0] - 1, player[1], 0};
             }
         }
     }

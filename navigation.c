@@ -206,12 +206,12 @@ void validateMove(int room, int input, int direction){
     else if(room == 3){
         if(direction == 2){
             if(input == 0){
-                player[] = {player[0], player[1] + 1, 1};
+                player[] = moveRight;
             }
         }
         else if(direction == 3){
             if(input == 1){
-                player[] = {player[0] - 1, player[1], 0};
+                player[] = moveDown;
             }
         }
     }

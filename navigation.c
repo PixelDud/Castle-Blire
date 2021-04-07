@@ -24,7 +24,7 @@ struct Location {
 
 struct Location player = {6, 6, 1};
 
-/* Define movements
+/* Define movements - Reference only
 moveUp = {player.x, player.y + 1, player.r = 0}
 moveDown = {player.x, player.y - 1, player.r = 2}
 moveLeft = {player.x - 1, player.y, player.r = 1}
@@ -39,7 +39,7 @@ moveRight = {player.x + 1, player.y, player.r = 3}
     3 = West
 */
 
-
+// Returns the player's location in the level
 int location(){
     return castle[level][player.x][player.y];
 }
@@ -64,7 +64,7 @@ int location(){
     15 = Right End
 */
 
-
+// Updates what the player sees
 void updateSight(int room, int direction, int delay){
     if(direction == 0){
         if(room == 1){
@@ -235,7 +235,7 @@ void updateSight(int room, int direction, int delay){
     }
 }
 
-
+// Gets input and moves player as needed
 void validateMove(int room, int input, int direction){
     if(room == 1){
         if(direction == 0){
@@ -342,7 +342,7 @@ void validateMove(int room, int input, int direction){
     
 }
 
-
+// The main function - Called in main.c as part of a loop
 void navigate(int delay){
     validateMove(location(), getInput(), player.r);
     updateSight(location(), player.r, delay);

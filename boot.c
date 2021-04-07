@@ -9,7 +9,7 @@
 #include "backgrounds/title_map.c"
 int fadeDelay = 10;
 
-
+// It is what it says...
 void bootSequence(){
     SHOW_BKG;
     DISPLAY_ON;

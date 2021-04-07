@@ -14,12 +14,20 @@ int start = 4;
 int select = 5;
 int a = 6;
 int b = 7;
-
-// Define location variables
 int level = 8;
-int player[] = {6, 6, 1};
 
-/* player[2] represents direction
+struct {
+    int x; // x position
+    int y; // y position
+    int r; // player rotation
+} player;
+
+player.x = 6;
+player.y = 6;
+player.r = 1;
+
+
+/* player.r represents direction
     0 = North
     1 = East
     2 = South
@@ -28,7 +36,7 @@ int player[] = {6, 6, 1};
 
 
 int location(){
-    return castle[level][player[0]][player[1]];
+    return castle[level][player.x][player.y];
 }
 
 

@@ -16,21 +16,20 @@ int a = 6;
 int b = 7;
 int level = 8;
 
-// Define movements
-int moveUp = (player[0], player[1] + 1, 0);
-int moveDown = (player[0], player[1] - 1, 2);
-int moveLeft = (player[0] - 1, player[1], 1);
-int moveRight = (player[0] + 1, player[1], 3);
-
-struct {
+struct Location {
     int x; // x position
     int y; // y position
     int r; // player rotation
-} player;
+};
 
-player.x = 6;
-player.y = 6;
-player.r = 1;
+struct Location player = {6, 6, 1};
+
+/* Define movements
+moveUp = {player.x, player.y + 1, player.r = 0}
+moveDown = {player.x, player.y - 1, player.r = 2}
+moveLeft = {player.x - 1, player.y, player.r = 1}
+moveRight = {player.x + 1, player.y, player.r = 3}
+*/
 
 
 /* player.r represents direction
@@ -66,109 +65,172 @@ int location(){
 */
 
 
-void updateSight(int room, int direction){
+void updateSight(int room, int direction, int delay){
     if(direction == 0){
         if(room == 1){
+            fadeO(delay);
             displayRoom(1);
+            fadeI(delay);
         }
         else if(room == 4){
+            fadeO(delay);
             displayRoom(3);
+            fadeI(delay);
         }
         else if(room == 5){
+            fadeO(delay);
             displayRoom(2);
+            fadeI(delay);
         }
         else if(room == 7){
+            fadeO(delay);
             displayRoom(5);
+            fadeI(delay);
         }
         else if(room == 8){
+            fadeO(delay);
             displayRoom(7);
+            fadeI(delay);
         }
         else if(room == 9){
+            fadeO(delay);
             displayRoom(4);
+            fadeI(delay);
         }
         else if(room == 11){
+            fadeO(delay);
             displayRoom(6);
+            fadeI(delay);
         }
         else if(room == 14){
+            fadeO(delay);
             displayRoom(0);
+            fadeI(delay);
         }
     }
     else if(direction == 1){
         if(room == 2){
+            fadeO(delay);
             displayRoom(1);
+            fadeI(delay);
         }
         else if(room == 5){
+            fadeO(delay);
             displayRoom(3);
+            fadeI(delay);
         }
         else if(room == 6){
+            fadeO(delay);
             displayRoom(2);
+            fadeI(delay);
         }
         else if(room == 8){
+            fadeO(delay);
             displayRoom(5);
+            fadeI(delay);
         }
         else if(room == 9){
+            fadeO(delay);
             displayRoom(7);
+            fadeI(delay);
         }
         else if(room == 10){
+            fadeO(delay);
             displayRoom(4);
+            fadeI(delay);
         }
         else if(room == 11){
+            fadeO(delay);
             displayRoom(6);
+            fadeI(delay);
         }
         else if(room == 15){
+            fadeO(delay);
             displayRoom(0);
+            fadeI(delay);
         }
     }
     else if(direction == 2){
         if(room == 1){
+            fadeO(delay);
             displayRoom(1);
+            fadeI(delay);
         }
         else if(room == 3){
+            fadeO(delay);
             displayRoom(2);
+            fadeI(delay);
         }
         else if(room == 6){
+            fadeO(delay);
             displayRoom(3);
         }
         else if(room == 7){
+            fadeO(delay);
             displayRoom(4);
+            fadeI(delay);
         }
         else if(room == 9){
+            fadeO(delay);
             displayRoom(5);
+            fadeI(delay);
         }
         else if(room == 10){
+            fadeO(delay);
             displayRoom(7);
+            fadeI(delay);
         }
         else if(room == 11){
+            fadeO(delay);
             displayRoom(6);
+            fadeI(delay);
         }
         else if(room == 12){
+            fadeO(delay);
             displayRoom(0);
+            fadeI(delay);
         }
     }
     else if(direction == 3){
         if(room == 2){
+            fadeO(delay);
             displayRoom(1);
+            fadeI(delay);
         }
         else if(room == 3){
+            fadeO(delay);
             displayRoom(6);
+            fadeI(delay);
         }
         else if(room == 4){
+            fadeO(delay);
             displayRoom(2);
+            fadeI(delay);
         }
         else if(room == 7){
+            fadeO(delay);
             displayRoom(7);
+            fadeI(delay);
         }
         else if(room == 8){
+            fadeO(delay);
             displayRoom(4);
+            fadeI(delay);
         }
         else if(room == 10){
+            fadeO(delay);
             displayRoom(5);
+            fadeI(delay);
         }
         else if(room == 11){
+            fadeO(delay);
             displayRoom(6);
+            fadeI(delay);
         }
         else if(room == 13){
+            fadeO(delay);
             displayRoom(0);
+            fadeI(delay);
         }
     }
 }
@@ -178,80 +240,102 @@ void validateMove(int room, int input, int direction){
     if(room == 1){
         if(direction == 0){
             if(input == 2){
-                player[] = moveUp;
+                player.y += 1;
+                player.r = 0;
             }
             if(input == 3){
-                player[] = moveDown;
+                player.y -= 1;
+                player.r = 2;
             }
         }
         else if(direction == 2){
             if(input == 0){
-                player[] = moveDown;
+                player.y -= 1;
+                player.r = 2;
             }
             if(input == 3){
-                player[] = moveUp;
+                player.y += 1;
+                player.r = 0;
             }
         }
     }
     else if(room == 2){
         if(direction == 1){
             if(input == 2){
-                player[] = moveRight;
+                player.x += 1;
+                player.r = 3;
             }
             else if(input == 3){
-                player[] = moveLeft;
+                player.x - 1;
+                player.r = 1;
             }
         }
         else if(direction == 3){
             if(input == 2){
-                player[] = moveLeft;
+                player.x - 1;
+                player.r = 1;
             }
             else if(input == 3){
-                player[] = moveRight;
+                player.x += 1;
+                player.r = 3;
             }
         }
     }
     else if(room == 3){
         if(direction == 2){
             if(input == 0){
-                player[] = moveRight;
+                player.x += 1;
+                player.r = 3;
             }
         }
         else if(direction == 3){
-            if(input == 1){
-                player[] = moveDown;
+            if(input == 0){
+                player.y += 1;
+                player.r = 0;
             }
         }
     }
     else if(room == 4){
         if(direction == 0){
             if(input == 0){
+                player.x += 1;
+                player.r = 3;
             }
         }
         else if(direction == 3){
-            if(input == 0){
+            if(input == 1){
+                player.y -= 1;
+                player.r = 2;
             }
         }
     }
     else if(room == 5){
         if(direction == 0){
-            if(input == 0){
+            if(input == 1){
+                player.x - 1;
+                player.r = 1;
             }
         }
         else if(direction == 1){
             if(input == 0){
+                player.y -= 1;
+                player.r = 2;
             }
         }
     }
     else if(room == 6){
         if(direction == 2){
             if(input == 0){
+                player.x - 1;
+                player.r = 1;
             }
             else{
             }
         }
         else if(direction == 1){
             if(input == 1){
+                player.y += 1;
+                player.r = 0;
             }
         }
     }
@@ -259,9 +343,7 @@ void validateMove(int room, int input, int direction){
 }
 
 
-void navigate(){
-    while(1){
-        validateMove(location(), getInput(), player[2]));
-        updateSight(location(), player[2]);
-    }
+void navigate(int delay){
+    validateMove(location(), getInput(), player.r);
+    updateSight(location(), player.r, delay);
 }

@@ -4,20 +4,16 @@
 #include "boot.c"
 #include "navigation.c"
 
+int wait = 2;
 
 void main(){
     int hall[4] = {1,4,5,6};
     
     bootSequence();
     
-    fadeO(2);
-    printf("%d", &location());
-    fadeI(2);
+    updateSight(location(), player.r, wait);
     
     while(1){
-        navigation();
-        fadeO(2);
-        printf("%d", &location());
-        fadeI(2);
+        navigate(wait);
     }
 }

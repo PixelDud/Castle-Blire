@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-int castle[8][8][8] = {
+int castle[9][8][8] = {
     { // Level One - castle[0][x][y]
         {13,  8, 15,  0, 13,  5,  0,  0},
         { 0,  7,  2,  8,  8, 10, 15,  0},

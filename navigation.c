@@ -16,6 +16,12 @@ int a = 6;
 int b = 7;
 int level = 8;
 
+// Define movements
+int moveUp = (player[0], player[1] + 1, 0);
+int moveDown = (player[0], player[1] - 1, 2);
+int moveLeft = (player[0] - 1, player[1], 1);
+int moveRight = (player[0] + 1, player[1], 3);
+
 struct {
     int x; // x position
     int y; // y position
@@ -172,46 +178,48 @@ void validateMove(int room, int input, int direction){
     if(room == 1){
         if(direction == 0){
             if(input == 2){
-                player[] = {player[0], player[1] + 1, 0}
+                player[] = moveUp;
             }
             if(input == 3){
-                player[] = {player[0], player[1] - 1, 2}
+                player[] = moveDown;
             }
         }
         else if(direction == 2){
-            if(input == 2){
-                player[] = {player[0], player[1] - 1, 2}
+            if(input == 0){
+                player[] = moveDown;
             }
             if(input == 3){
-                player[] = {player[0], player[1] + 1, 0}
+                player[] = moveUp;
             }
         }
     }
     else if(room == 2){
         if(direction == 1){
             if(input == 2){
-                player[] = {player[0] + 1, player[1], 2}
+                player[] = moveRight;
             }
             else if(input == 3){
-                player[] = {player[0] - 1, player[1], 3}
+                player[] = moveLeft;
             }
         }
         else if(direction == 3){
             if(input == 2){
-                player[] = {player[0] - 1, player[1], 3}
+                player[] = moveLeft;
             }
             else if(input == 3){
-                player[] = {player[0] + 1, player[1], 2}
+                player[] = moveRight;
             }
         }
     }
     else if(room == 3){
-        if(direction == 3){
-            if(input == 1){
+        if(direction == 2){
+            if(input == 0){
+                player[] = moveRight;
             }
         }
-        else if(direction == 4){
-            if(input == 0){
+        else if(direction == 3){
+            if(input == 1){
+                player[] = moveDown;
             }
         }
     }
@@ -220,7 +228,7 @@ void validateMove(int room, int input, int direction){
             if(input == 0){
             }
         }
-        else if(direction == 4){
+        else if(direction == 3){
             if(input == 0){
             }
         }
@@ -236,7 +244,7 @@ void validateMove(int room, int input, int direction){
         }
     }
     else if(room == 6){
-        if(direction == 3){
+        if(direction == 2){
             if(input == 0){
             }
             else{

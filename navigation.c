@@ -2,8 +2,13 @@
 // Can be used with other projects
 #include <gb/gb.h>
 #include <stdio.h>
-#include "castle.c"
-#include "rooms/rooms.c"
+
+#include "navigation.h"
+#include "utilities.h"
+#include "rooms/rooms.h"
+
+#include "castle.h"
+
 
 // Define inputs
 int right = 0;
@@ -15,12 +20,6 @@ int select = 5;
 int a = 6;
 int b = 7;
 int level = 8;
-
-struct Location {
-    int x; // x position
-    int y; // y position
-    int r; // player rotation
-};
 
 struct Location player = {6, 6, 1};
 
@@ -237,6 +236,26 @@ void updateSight(int room, int direction, int delay){
 
 // Gets input and moves player as needed
 void validateMove(int room, int input, int direction){
+
+/*
+    Just for testing 
+	if (input == 0){
+		player.x += 1;
+		return;
+	}
+	else if(input == 1){
+		player.x -= 1;
+		return;
+	}
+	else if (input == 2){
+		player.y += 1;
+		return;
+	}
+	else if(input == 3){
+		player.y -= 1;
+		return;
+	}
+*/
     if(room == 1){
         if(direction == 0){
             if(input == 2){
@@ -344,6 +363,9 @@ void validateMove(int room, int input, int direction){
 
 // The main function - Called in main.c as part of a loop
 void navigate(int delay){
-    validateMove(location(), getInput(), player.r);
+    int input = getInput();
+    
+    validateMove(location(), input, player.r);
     updateSight(location(), player.r, delay);
+//    updateSight((UINT8)(sys_time >> 6), player.r, delay);
 }

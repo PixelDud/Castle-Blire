@@ -1,6 +1,5 @@
 @REM Build the game:
-c:\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o main.o main.c
-c:\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o main.gb main.o
+c:\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -o main.gb main.c boot.c castle.c navigation.c utilities.c rooms/rooms.c
 
 @REM Clean up unnecessary files:
 DEL *.lst

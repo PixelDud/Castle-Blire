@@ -1,22 +1,25 @@
 // rooms.c - The various rooms making up Castle Blire
 #include <gb/gb.h>
 #include <stdio.h>
-#include "variation0_data.c"
-#include "variation0_map.c"
-#include "variation1_data.c"
-#include "variation1_map.c"
-#include "variation2_data.c"
-#include "variation2_map.c"
-#include "variation3_data.c"
-#include "variation3_map.c"
-#include "variation4_data.c"
-#include "variation4_map.c"
-#include "variation5_data.c"
-#include "variation5_map.c"
-#include "variation6_data.c"
-#include "variation6_map.c"
-#include "variation7_data.c"
-#include "variation7_map.c"
+
+#include "rooms.h"
+
+#include "res/variation0_data.c"
+#include "res/variation0_map.c"
+#include "res/variation1_data.c"
+#include "res/variation1_map.c"
+#include "res/variation2_data.c"
+#include "res/variation2_map.c"
+#include "res/variation3_data.c"
+#include "res/variation3_map.c"
+#include "res/variation4_data.c"
+#include "res/variation4_map.c"
+#include "res/variation5_data.c"
+#include "res/variation5_map.c"
+#include "res/variation6_data.c"
+#include "res/variation6_map.c"
+#include "res/variation7_data.c"
+#include "res/variation7_map.c"
 
 
 void roomZero(){

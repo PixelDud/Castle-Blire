@@ -2,7 +2,7 @@
 // Can be reused with other projects
 #include <gb/gb.h>
 #include <stdio.h>
-#include "utilities.c"
+#include "utilities.h"
 #include "backgrounds/boot_data.c"
 #include "backgrounds/boot_map.c"
 #include "backgrounds/title_data.c"

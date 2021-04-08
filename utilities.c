@@ -55,31 +55,32 @@ int getInput(){
 	while(1){
         switch(joypad()){
             case J_RIGHT: // return 0 is RIGHT
+                waitpadup(); // Wait for the player to release the button before processing.
                 return 0;
-                break;
             case J_LEFT: // return 1 is LEFT
+                waitpadup();
                 return 1;
-                break;
             case J_UP: // return 2 is UP
+                waitpadup();
                 return 2;
-                break;
             case J_DOWN: // return 3 is DOWN
+                waitpadup();
                 return 3;
-                break;
             case J_START: // return 4 is START
+                waitpadup();
                 return 4;
-                break;
             case J_SELECT: // return 5 is SELECT
+                waitpadup();
                 return 5;
-                break;
             case J_A: // return 6 is A
+                waitpadup();
                 return 6;
-                break;
             case J_B: // return 7 is B
+                waitpadup();
                 return 7;
-                break;
             default:
                 break;
 		}
+		wait_vbl_done(); // wait one frame before checking joypad input again
 	}
 }

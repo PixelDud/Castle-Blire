@@ -8,7 +8,7 @@
 int wait = 2;
 
 void main(){
-    bootSequence();
+//    bootSequence();
     
     while(1){
         navigate(wait);

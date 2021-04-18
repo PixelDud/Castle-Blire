@@ -237,22 +237,26 @@ void updateSight(int room, int direction, int delay){
 // Gets input and moves player as needed
 void validateMove(int room, int input, int direction){
 
-/*
-    Just for testing 
+
+/*    Just for testing 
 	if (input == 0){
 		player.x += 1;
+        player.r = 0;
 		return;
 	}
 	else if(input == 1){
 		player.x -= 1;
+        player.r = 2;
 		return;
 	}
 	else if (input == 2){
 		player.y += 1;
+        player.r = 1;
 		return;
 	}
 	else if(input == 3){
 		player.y -= 1;
+        player.r = 4;
 		return;
 	}
 */
@@ -261,20 +265,24 @@ void validateMove(int room, int input, int direction){
             if(input == 2){
                 player.y += 1;
                 player.r = 0;
+                return;
             }
             if(input == 3){
                 player.y -= 1;
                 player.r = 2;
+                return;
             }
         }
         else if(direction == 2){
             if(input == 0){
                 player.y -= 1;
                 player.r = 2;
+                return;
             }
             if(input == 3){
                 player.y += 1;
                 player.r = 0;
+                return;
             }
         }
     }
@@ -283,20 +291,24 @@ void validateMove(int room, int input, int direction){
             if(input == 2){
                 player.x += 1;
                 player.r = 3;
+                return;
             }
             else if(input == 3){
                 player.x - 1;
                 player.r = 1;
+                return;
             }
         }
         else if(direction == 3){
             if(input == 2){
                 player.x - 1;
                 player.r = 1;
+                return;
             }
             else if(input == 3){
                 player.x += 1;
                 player.r = 3;
+                return;
             }
         }
     }
@@ -305,12 +317,14 @@ void validateMove(int room, int input, int direction){
             if(input == 0){
                 player.x += 1;
                 player.r = 3;
+                return;
             }
         }
         else if(direction == 3){
             if(input == 0){
                 player.y += 1;
                 player.r = 0;
+                return;
             }
         }
     }
@@ -319,12 +333,14 @@ void validateMove(int room, int input, int direction){
             if(input == 0){
                 player.x += 1;
                 player.r = 3;
+                return;
             }
         }
         else if(direction == 3){
             if(input == 1){
                 player.y -= 1;
                 player.r = 2;
+                return;
             }
         }
     }
@@ -333,12 +349,14 @@ void validateMove(int room, int input, int direction){
             if(input == 1){
                 player.x - 1;
                 player.r = 1;
+                return;
             }
         }
         else if(direction == 1){
             if(input == 0){
                 player.y -= 1;
                 player.r = 2;
+                return;
             }
         }
     }
@@ -347,6 +365,7 @@ void validateMove(int room, int input, int direction){
             if(input == 0){
                 player.x - 1;
                 player.r = 1;
+                return;
             }
             else{
             }
@@ -355,17 +374,16 @@ void validateMove(int room, int input, int direction){
             if(input == 1){
                 player.y += 1;
                 player.r = 0;
+                return;
             }
         }
     }
-    
 }
 
 // The main function - Called in main.c as part of a loop
 void navigate(int delay){
     int input = getInput();
-    
-    validateMove(location(), input, player.r);
-    updateSight(location(), player.r, delay);
+    validateMove(castle[level][player.x][player.y], input, player.r);
+    updateSight(castle[level][player.x][player.y], player.r, delay);
 //    updateSight((UINT8)(sys_time >> 6), player.r, delay);
 }

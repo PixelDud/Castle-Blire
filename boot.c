@@ -13,18 +13,18 @@ int fadeDelay = 10;
 void bootSequence(){
     SHOW_BKG;
     DISPLAY_ON;
-    
+
     set_bkg_data(0, 114, boot_data);
     set_bkg_tiles(0, 0, 20, 18, boot_map);
-    
+
     delayGame(125);
-    
+
     fadeO(fadeDelay);
-    
+
     set_bkg_data(0, 114, title_data);
     set_bkg_tiles(0, 0, 20, 18, title_map);
-    
+
     fadeI(fadeDelay);
-    
+
     waitpad(J_START);
 }
